@@ -31,5 +31,6 @@ cp ./.gitconfig ~/
 cp ./.config/starship.toml ~/.config/starship.toml
 mkdir -p ~/.config/wezterm/
 cp ./.config/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
+cp ./.zsh/aliases.zsh ~/.zsh
 
 echo "== RESTART PC =="
