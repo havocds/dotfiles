@@ -1,0 +1,85 @@
+add_newline = false
+
+format = """$os$username$hostname$directory$git_branch$git_status$kubernetes"""
+
+[directory]
+truncation_length = 1
+truncation_symbol = '.../'
+style = "blue"
+read_only_style = '197'
+
+[character]
+success_symbol = ""
+error_symbol = ""
+vimcmd_symbol = ""
+
+[os]
+format = '[$symbol](bold white) '   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+
+[hostname]
+ssh_only = false
+format = 'on [$hostname](bold yellow) '
+disabled = true
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style)"
+truncation_symbol = ".../"
+style = "bold green"
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold green'
+conflicted = '🏳'
+up_to_date = ''
+untracked = '[*](red)'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = '襁 '
+deleted = ' '
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+
+[kubernetes]
+format = '[$symbol$context \($namespace\)]($style) '
+symbol = "󱃾 "
+disabled = false
+style = "bold purple"
+
+[vagrant]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true
